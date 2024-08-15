@@ -1,0 +1,364 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: "Josefin Sans", Helvetica, sans-serif;
+}
+
+
+/* ----- STYLE HEADER SECTION ----- */
+.title-section {
+    background-color: black;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+h1 {
+    font-size: 2rem;
+    font-weight: 350;
+}
+
+h1 a, h1 a:visited {
+    text-decoration: none;
+    color: white;
+}
+
+.navbar {
+    background-color: #CB7878;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+}
+
+.navlinks {
+    color: white;
+    display: flex;
+    margin: auto;
+    justify-content: space-around;
+    flex-basis: 60%;
+
+}
+
+.navlinks li {
+    font-size: 1.1rem;
+    font-weight: 350;
+    list-style-type: none;
+}
+
+.navlinks a, .navlinks a:visited {
+    text-decoration: none;
+    color: white;
+}
+
+.navlinks a:hover {
+    color: black;
+}
+
+
+.tempsection {
+    background-color: #FFF3F3;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+}
+
+.tempcontainer {
+    width: 70%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.temp {
+    display: flex;
+    gap: 1rem;
+}
+
+.filterby {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.filter-btn {
+    padding: 0.1rem 1rem;
+    font-size: 0.7rem;
+
+}
+
+
+
+#tempinput, .tempsection, .todayTemp {
+    text-align: center;
+    font-weight: 300;
+    font-size: 1.1rem;
+}
+
+
+#temptext, #filtertext {
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+
+#tempinput:focus {
+    outline: none;
+}
+
+#tempinput::placeholder {
+    opacity: 0.3;
+}
+
+header {
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    width: 100%;
+}
+
+/* ----- STYLE CATEGORIES SECTION ----- */
+
+#tops, #bottoms, #bags, #shoes, #outerwear {
+    scroll-behavior: smooth;
+}
+
+
+html {
+    scroll-padding-top: 160px;
+    scroll-behavior: smooth;
+}
+
+#tops {
+    padding-top: 210px;
+}
+
+
+.section-container, .inspiration-section {
+    width: 65%;
+    margin: auto;
+    text-align: center;
+    padding-top: 3.5rem;
+}
+
+.img-container {
+    display: flex;
+    row-gap: 1.2rem;
+    column-gap: 1.2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 1.25rem;
+}
+
+
+.itemImg {
+    max-width: 165px;
+    width: 100%;
+    outline: rgb(177, 177, 177) 1px solid;
+}
+
+
+.selectable {
+    border: 2px solid transparent; /* Default transparent border */
+    outline: none; /* Remove default focus outline */
+    outline: rgb(177, 177, 177) 1px solid;
+
+}
+
+
+
+/* Border when selected */
+.selected {
+    border: 3px solid #CB7878;
+}
+
+/* Default outline style */
+.itemImg:focus {
+    outline: 3px solid blue;
+}
+
+/* No outline when using mouse */
+.no-outline .itemImg:focus {
+    outline: none;
+}
+
+
+
+.itemImg:hover {
+    background-color: #f3f3f3dd;
+    cursor: pointer;
+}
+
+
+
+.category {
+    text-transform: uppercase;
+}
+
+
+/* ----- STYLE GENERATE BUTTON ----- */
+
+.generateBtn {
+    background-color: #464646;
+    color: white;
+    padding: 1.25rem 2.18rem;
+    border: none;
+    font-weight: bold;
+    font-size: 1rem;
+    border-radius: 0.5rem;
+    display: block;
+    margin: 0 auto;
+    margin-top: 5.5rem;
+    margin-bottom: 2rem;
+    cursor: pointer;
+}
+
+
+/* ----- STYLE OOTD SECTION ----- */
+
+
+.ootd-section {
+    display: flex;
+    justify-content: center;
+    padding-top: 4.5rem;
+    padding-bottom: 3rem;
+    gap: 9.5rem;
+}
+
+.info {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.info .ootd-text {
+    font-weight: 700;
+    font-size: 3rem;
+    letter-spacing: 0.3rem;
+}
+
+.info .ootd-text:nth-child(2) {
+    margin-top: 2rem;
+}
+
+.result {
+    width: 430px;
+    height: 430px;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+
+.resetBtn {
+    margin-top: 2.6rem;
+    font-size: 1rem;
+    font-weight: 400;
+    letter-spacing: 0.1rem;
+    background-color: #CB7878;
+    padding: 0.68rem 1.25rem;
+    border-radius: 0.5rem;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+
+
+.result img {
+    position: absolute;
+    width: 300px;
+}
+
+
+
+.selected-tops {
+    top: -20px;
+    left: -12px;
+}
+
+.selected-bottoms {
+    width: 280px;
+    top: 120px;
+    left: -10px;
+
+}
+
+.selected-outerwear {
+    right: 5px;
+    top: 0px;
+    z-index: -1;
+
+
+}
+
+.selected-bags {
+    width: 350px !important;
+    top: 25px;
+    right: 0px;
+}
+
+.selected-shoes {
+    width: 200px !important;
+    top: 230px;
+    right: 30px;
+}
+
+
+/* ----- STYLE OOTD SECTION ----- */
+.footer {
+    background-color: black;
+    color: white;
+    margin-top: 3rem;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.8rem;
+    font-weight: 400;
+}
+
+/* ----- STYLE INSPIRATION SECTION ----- */
+
+.inspirations-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 0.2rem;
+
+}
+
+.ins-img {
+    outline: rgb(177, 177, 177) 1px solid;
+    width: 210px;
+    height: 210px;
+    margin: 0.3rem
+}
+
+
+/* MEDIA QUERIES FOR NAV*/
+
+@media screen and (max-width: 930px) {
+    .tempsection {
+        height: 4.75rem;
+    }
+
+    .tempcontainer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+
+}

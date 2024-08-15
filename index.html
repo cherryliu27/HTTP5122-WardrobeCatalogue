@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wardrobe Catalogue</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./app.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- navbar -->
+    <header class="header">
+        <div class="fixed-header">
+            <div class="title-section">
+                <h1><a href="#">CHERRY'S WARDROBE CATALOGUE</a></h1>
+            </div>
+            <nav class="navbar">
+                <ul class="navlinks">
+                    <li><a href="#top">TOPS</a></li>
+                    <li><a href="#bottoms">BOTTOMS</a></li>
+                    <li><a href="#outerwear">OUTERWEAR</a></li>
+                    <li><a href="#bags">BAGS</a></li>
+                    <li><a href="#shoes">SHOES</a></li>
+                    <li><a href="#inspirations">INSPIRATIONS</a></li>
+                </ul>
+            </nav>
+        </div>
+        <!-- temperature -->
+        <div class="tempsection">
+            <div class="tempcontainer">
+                <div class="temp">
+                    <p id="temptext">Today's Temperature:</p>
+                    <div class="todayTemp"></div>
+                </div>
+                <div class="filterby">
+                    <p id="filtertext">Filter By:</p>
+                    <div class="filter">
+                        <button class="filter-btn" data-id="all">All</button>
+                        <button class="filter-btn" data-id="winter">Winter</button>
+                        <button class="filter-btn" data-id="summer">Summer</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="category-section">
+        <!-- TOPS SECTION -->
+        <section class="section-container" id="tops">
+            <h2 class="category">tops</h2>
+            <div class="img-container">
+            </div>
+        </section>
+        <!-- BOTTOMS SECTION -->
+        <section class="section-container" id="bottoms">
+            <h2 class="category">bottoms</h2>
+            <div class="img-container">
+            </div>
+        </section>
+        <!-- OUTERWEAR SECTION -->
+        <section class="section-container" id="outerwear">
+            <h2 class="category">outerwear</h2>
+            <div class="img-container">
+            </div>
+        </section>
+        <!-- BAGS SECTION -->
+        <section class="section-container" id="bags">
+            <h2 class="category">bags</h2>
+            <div class="img-container">
+            </div>
+        </section>
+        <!-- SHOES SECTION -->
+        <section class="section-container" id="shoes">
+            <h2 class="category">shoes</h2>
+            <div class="img-container">
+            </div>
+        </section>
+    </div>
+
+    <button class="generateBtn">GENERATE OUTFIT</button>
+
+    <!-- Outfit of the day section -->
+    <section class="ootd-section" id="ootd">
+        <div class="info">
+            <div class="ootd-text">YOUR</div>
+            <div class="ootd-text">OOTD</div>
+            <button class="resetBtn">Pick Another Outfit</button>
+        </div>
+        <div class="result">
+        </div>
+    </section>
+
+
+    <!-- Inspirations -->
+    <section class="inspiration-section" id="inspirations">
+        <h2>INSPIRATIONS</h2>
+        <div class="inspirations-container">
+            <img class="ins-img" src="./Images/ins1.png" alt="inspiration1">
+            <img class="ins-img" src="./Images/ins2.png" alt="inspiration2">
+            <img class="ins-img" src="./Images/ins3.png" alt="inspiration3">
+            <img class="ins-img" src="./Images/ins4.png" alt="inspiration4">
+            <img class="ins-img" src="./Images/ins5.png" alt="inspiration5">
+            <img class="ins-img" src="./Images/ins6.png" alt="inspiration6">
+            <img class="ins-img" src="./Images/ins7.png" alt="inspiration7">
+            <img class="ins-img" src="./Images/ins8.png" alt="inspiration8">
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>Copyright &copy; Cherry Liu Pet Project - Wardrobe Catalogue</p>
+    </footer>
+</body>
+
+</html>
